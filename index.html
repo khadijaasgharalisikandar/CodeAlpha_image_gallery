@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lumen — A Photo Gallery</title>
+<meta name="description" content="Lumen — a curated, category-filterable image gallery with a lightbox viewer.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&family=Sora:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="grain"></div>
+
+<header class="hero">
+  <div class="hero__media">
+    <img src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=1600&q=80&auto=format&fit=crop" alt="" class="hero__img">
+    <div class="hero__scrim"></div>
+  </div>
+  <div class="hero__content">
+    <p class="eyebrow">Est. 2026 · A Curated Collection</p>
+    <h1 class="hero__title">Lumen</h1>
+    <p class="hero__subtitle">Moments in nature, architecture, travel &amp; food — captured, filtered, framed.</p>
+  </div>
+</header>
+
+<nav class="filters" id="filters">
+  <button class="filter-btn active" data-filter="all">All Work</button>
+  <button class="filter-btn" data-filter="nature">Nature</button>
+  <button class="filter-btn" data-filter="architecture">Architecture</button>
+  <button class="filter-btn" data-filter="travel">Travel</button>
+  <button class="filter-btn" data-filter="food">Food</button>
+  <button class="filter-btn" data-filter="mine">My Photos</button>
+  <span class="filters__count" id="filtersCount"></span>
+  <label class="upload-btn" for="uploadInput">
+    <span>+ Upload</span>
+    <input type="file" id="uploadInput" accept="image/*" multiple hidden>
+  </label>
+</nav>
+
+<main class="gallery" id="gallery">
+  <!-- Cards injected by JS -->
+</main>
+
+<!-- Lightbox -->
+<div class="lightbox" id="lightbox">
+  <button class="lightbox__close" id="lightboxClose" aria-label="Close">&times;</button>
+  <button class="lightbox__nav lightbox__nav--prev" id="lightboxPrev" aria-label="Previous image">&#8249;</button>
+  <div class="lightbox__stage">
+    <img src="" alt="" id="lightboxImg" class="lightbox__img">
+    <div class="lightbox__caption">
+      <span class="lightbox__title" id="lightboxTitle"></span>
+      <span class="lightbox__category" id="lightboxCategory"></span>
+    </div>
+    <div class="lightbox__dots" id="lightboxDots"></div>
+  </div>
+  <button class="lightbox__nav lightbox__nav--next" id="lightboxNext" aria-label="Next image">&#8250;</button>
+</div>
+
+<footer class="footer">
+  <p>Lumen Gallery — designed &amp; built with HTML, CSS &amp; JavaScript</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
